@@ -1,24 +1,24 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
+# import matplotlib.font_manager as fm
 import os
 import platform
 import datetime
 import pandas as pd
 
-# ✅ NanumGothic 폰트 직접 다운로드 및 설정
-font_url = "https://github.com/park-junha/Nanum-Gothic-Font/raw/main/NanumGothic.ttf"
-font_path = "/tmp/NanumGothic.ttf"
+# # ✅ NanumGothic 폰트 직접 다운로드 및 설정
+# font_url = "https://github.com/park-junha/Nanum-Gothic-Font/raw/main/NanumGothic.ttf"
+# font_path = "/tmp/NanumGothic.ttf"
 
 
-if not os.path.exists(font_path):
-    import urllib.request
-    urllib.request.urlretrieve(font_url, font_path)
+# if not os.path.exists(font_path):
+#     import urllib.request
+#     urllib.request.urlretrieve(font_url, font_path)
 
-# ✅ matplotlib에 폰트 등록
-font_prop = fm.FontProperties(fname=font_path)
-plt.rcParams['font.family'] = font_prop.get_name()
-plt.rcParams['axes.unicode_minus'] = False
+# # ✅ matplotlib에 폰트 등록
+# font_prop = fm.FontProperties(fname=font_path)
+# plt.rcParams['font.family'] = font_prop.get_name()
+# plt.rcParams['axes.unicode_minus'] = False
 
 # ✅ 한글 폰트 설정
 # if platform.system() == 'Windows':
