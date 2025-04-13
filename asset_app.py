@@ -5,13 +5,16 @@ import datetime
 import pandas as pd
 
 # ✅ 한글 폰트 설정
-if platform.system() == 'Windows':
-    plt.rcParams['font.family'] = 'Malgun Gothic'
-elif platform.system() == 'Darwin':
-    plt.rcParams['font.family'] = 'AppleGothic'
-else:
-    plt.rcParams['font.family'] = 'NanumGothic'
+# if platform.system() == 'Windows':
+#     plt.rcParams['font.family'] = 'Malgun Gothic'
+# elif platform.system() == 'Darwin':
+#     plt.rcParams['font.family'] = 'AppleGothic'
+# else:
+#     plt.rcParams['font.family'] = 'NanumGothic'
+# plt.rcParams['axes.unicode_minus'] = False
+plt.rcParams['font.family'] = 'NanumGothic'
 plt.rcParams['axes.unicode_minus'] = False
+
 
 # ✅ 현재 연도
 current_year = datetime.datetime.now().year
