@@ -6,9 +6,10 @@ import platform
 import datetime
 import pandas as pd
 
-# ✅ 폰트 다운로드 (Streamlit Cloud에서만)
-font_url = "https://github.com/naver/nanumfont/blob/master/ttf/NanumGothic.ttf?raw=true"
+# ✅ NanumGothic 폰트 직접 다운로드 및 설정
+font_url = "https://github.com/park-junha/Nanum-Gothic-Font/raw/main/NanumGothic.ttf"
 font_path = "/tmp/NanumGothic.ttf"
+
 
 if not os.path.exists(font_path):
     import urllib.request
