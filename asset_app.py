@@ -1,8 +1,23 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+import os
 import platform
 import datetime
 import pandas as pd
+
+# ✅ 폰트 다운로드 (Streamlit Cloud에서만)
+font_url = "https://github.com/naver/nanumfont/blob/master/ttf/NanumGothic.ttf?raw=true"
+font_path = "/tmp/NanumGothic.ttf"
+
+if not os.path.exists(font_path):
+    import urllib.request
+    urllib.request.urlretrieve(font_url, font_path)
+
+# ✅ matplotlib에 폰트 등록
+font_prop = fm.FontProperties(fname=font_path)
+plt.rcParams['font.family'] = font_prop.get_name()
+plt.rcParams['axes.unicode_minus'] = False
 
 # ✅ 한글 폰트 설정
 # if platform.system() == 'Windows':
@@ -12,8 +27,8 @@ import pandas as pd
 # else:
 #     plt.rcParams['font.family'] = 'NanumGothic'
 # plt.rcParams['axes.unicode_minus'] = False
-plt.rcParams['font.family'] = 'NanumGothic'
-plt.rcParams['axes.unicode_minus'] = False
+# plt.rcParams['font.family'] = 'NanumGothic'
+# plt.rcParams['axes.unicode_minus'] = False
 
 
 # ✅ 현재 연도
@@ -44,7 +59,7 @@ for year in range(1, years + 1):
 year_labels = list(range(current_year, current_year + years + 1))  # 2025 ~ 2055 등
 
 # ✅ 본문 출력
-st.title("📈 자산 성장 시뮬레이션")
+st.title("📈 자산 성장 시뮬레이션-v1.1")
 st.write(
     f"초기 추자 자본: **{initial_capital:.2f}억 원**, "
     f"첫 해 저축: **{initial_saving_million:,}만 원**, "
