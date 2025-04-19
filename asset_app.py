@@ -21,7 +21,7 @@ current_year = datetime.datetime.now().year
 # ✅ 사이드바 입력
 st.markdown("<h1 style='font-size: 20pt;'>입력 설정</h1>", unsafe_allow_html=True)
 initial_capital = st.sidebar.number_input("초기 투자금 (억 원)", value=1.0, step=0.1)
-initial_saving_million = st.sidebar.number_input("연 적립식 투자금 (만원)", value=4000, step=100)
+initial_saving_million = st.sidebar.number_input("연 적립식 투자금 (만원)", value=2000, step=100)
 savings_growth = st.sidebar.slider("연 적립식 투자금 증가율 (%)", 0.0, 50.0, 5.0, step=0.5) / 100
 annual_return = st.sidebar.slider("연 투자 수익률 (%)", 0.0, 50.0, 10.0, step=0.5) / 100
 years = st.sidebar.slider("총 투자 기간 (년)", 1, 100, 30)
